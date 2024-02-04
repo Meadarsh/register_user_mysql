@@ -26,7 +26,7 @@ app.post('/register', (req, res) => {
    
     const { name, email,number, password } = req.body;
   
-   const insertQuery = 'INSERT INTO user (name, email, number, password) VALUES (?, ?, ?)';
+   const insertQuery = 'INSERT INTO user (name, email, number, password) VALUES (?, ?, ?,?)';
   
    connection.query(insertQuery, [name, email, number, password], (error, results) => {
     if (error) {
